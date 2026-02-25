@@ -1,12 +1,12 @@
 :root {
-    --bg-color: #0d0d0d;
+    --bg-color: #000814;
     --text-color: #ffffff;
-    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-bg: rgba(255, 255, 255, 0.03);
     --glass-border: rgba(255, 255, 255, 0.1);
-    --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
-    --hover-gradient: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
-    --blob1-color: #4f46e5;
-    --blob2-color: #7c3aed;
+    --accent-gradient: linear-gradient(135deg, #003566 0%, #ffc300 100%);
+    --hover-gradient: linear-gradient(135deg, #001d3d 0%, #ffd60a 100%);
+    --blob1-color: #003566;
+    --blob2-color: #ffd60a;
 }
 
 * {

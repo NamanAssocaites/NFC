@@ -158,7 +158,7 @@ h1 {
 .action-btn i {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
-    color: var(--navy-blue);
+    color: #ffd60a;
 }
 
 .action-btn:hover {

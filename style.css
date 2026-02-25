@@ -128,6 +128,55 @@ h1 {
     font-weight: 300;
 }
 
+.quick-actions {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    animation: fadeIn 1.2s ease-out;
+}
+
+.action-btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(15px);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.action-btn i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: transparent;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.action-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.call-btn:hover {
+    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+}
+
+.save-btn:hover {
+    box-shadow: 0 10px 20px rgba(168, 85, 247, 0.2);
+}
+
 .links-container {
     display: flex;
     flex-direction: column;

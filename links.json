@@ -2,6 +2,11 @@
     "name": "Naman Associates",
     "bio": "Trust | Excellence | Quality Service",
     "profileImage": "logo.png",
+    "contact": {
+        "name": "Sudhir Kumar",
+        "company": "Naman Associates",
+        "phone": "9412145048"
+    },
     "links": [
         {
             "title": "Instagram",

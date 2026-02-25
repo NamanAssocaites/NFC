@@ -11,6 +11,41 @@ document.addEventListener('DOMContentLoaded', async () => {
             profileImg.src = data.profileImage;
         }
 
+        // Add Contact / Quick Actions Section
+        if (data.contact) {
+            const contactSection = document.createElement('div');
+            contactSection.className = 'quick-actions';
+            contactSection.innerHTML = `
+                <a href="tel:+91${data.contact.phone}" class="action-btn call-btn">
+                    <i class="fas fa-phone"></i>
+                    <span>Call Now</span>
+                </a>
+                <button class="action-btn save-btn" id="save-contact">
+                    <i class="fas fa-user-plus"></i>
+                    <span>Save Contact</span>
+                </button>
+            `;
+            linksContainer.before(contactSection);
+
+            document.getElementById('save-contact').addEventListener('click', () => {
+                const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:${data.contact.name}
+ORG:${data.contact.company}
+TEL;TYPE=CELL:${data.contact.phone}
+END:VCARD`;
+                const blob = new Blob([vcard], { type: 'text/vcard' });
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = `${data.contact.name}.vcf`;
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+            });
+        }
+
         linksContainer.innerHTML = ''; // Clear loading state
         data.links.forEach((link, index) => {
             const linkElement = document.createElement('a');
